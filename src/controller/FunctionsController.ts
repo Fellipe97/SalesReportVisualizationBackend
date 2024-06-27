@@ -39,10 +39,9 @@ const FunctionsController = {
             res.send(jsonAllReport);
         } catch (error) {
             console.log('Erro: ', error)
-            res.json({ error: 'Erro ao se conectar ao banco de dados' });
+            res.json({ error: 'Erro ao se conectar ao banco de dados. Por favor recarregue a página.' });
         }
     },
-
     /* 
         Poderia criar rotas para receber parametro e filtrar aqui mas 
         não seria otimizado e por esse motivo que coloquei o filtro 
@@ -50,7 +49,6 @@ const FunctionsController = {
         requisição e construir um backend fiz uma rota para retornar
         todos os dados necessários para gerar o gráfico
     */
-
 }
 
 export default () => FunctionsController
